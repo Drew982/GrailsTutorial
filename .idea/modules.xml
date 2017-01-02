@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GrailsTutorial.iml" filepath="$PROJECT_DIR$/.idea/modules/GrailsTutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GrailsTutorial_integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/GrailsTutorial_integrationTest.iml" group="GrailsTutorial" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GrailsTutorial_main.iml" filepath="$PROJECT_DIR$/.idea/modules/GrailsTutorial_main.iml" group="GrailsTutorial" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GrailsTutorial_test.iml" filepath="$PROJECT_DIR$/.idea/modules/GrailsTutorial_test.iml" group="GrailsTutorial" />
+    </modules>
+  </component>
+</project>
