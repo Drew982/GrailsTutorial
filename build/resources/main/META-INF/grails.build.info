@@ -1,0 +1,6 @@
+#Mon, 02 Jan 2017 07:58:18 -0600
+
+info.app.version=0.1
+info.app.name=GrailsTutorial
+grails.env=development
+info.app.grailsVersion=3.2.4
