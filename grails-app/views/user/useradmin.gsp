@@ -4,13 +4,31 @@
     <meta charset="UTF-8">
     <title>Admin Services</title>
     <style>
+        body{
+            text-align: center;
+        }
+
         table {
             border: 3px solid black;
             border-collapse: collapse;
+            margin-bottom: 10px;
+            table-layout: fixed;
+            width: 100%;
         }
 
-        td {
+        td, th {
             border: 2px solid black;
+            text-align: center;
+            font-size: 15pt;
+        }
+
+        td:hover{
+            background-color: darkblue;
+            color: white;
+        }
+
+        td{
+            transition: 0.5s background-color;
         }
 
         tr:nth-child(odd){
@@ -28,6 +46,8 @@
 
             height: 50px;
             width: 75px;
+
+            margin: 10px 25px;
         }
 
         .update {
@@ -36,6 +56,14 @@
 
         .delete {
             background-color: red;
+        }
+
+        .create {
+            background-color: purple;
+            font-weight: bold;
+            color: whitesmoke;
+            height: 35px;
+            width: 50%;
         }
     </style>
 </head>
@@ -79,5 +107,8 @@
         </tr>
     </g:each>
 </table>
+
+<button class="create">Create</button>
+
 </body>
 </html>
