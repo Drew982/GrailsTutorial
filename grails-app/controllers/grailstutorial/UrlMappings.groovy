@@ -11,7 +11,7 @@ class UrlMappings {
 
         "/"(view:"/index")
         "/new"(view:"/newpage") //left-side is URL mapping; right-side is page to be called/rendered
-        "/ln"(controller: "login", action: "q")
+        "/ln"(controller: "user", action: "q")
         "500"(view:'/error')
         "404"(view:'/notFound')
     }

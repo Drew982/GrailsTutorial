@@ -1,7 +1,8 @@
 package grailstutorial
 
-class LoginController {
-    LoginService loginService
+class UserController
+{
+    UserService loginService
 
     def q() {
         def usernames = loginService.getUsernames()
