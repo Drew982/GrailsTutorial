@@ -8,5 +8,4 @@ class User {
     String username
     int age
     int height
-    int id
 }
