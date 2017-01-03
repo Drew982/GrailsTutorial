@@ -59,7 +59,6 @@ class LoginService //Handles Data Access Objects [CRUD - Create, Read, Update, D
     /******************************DELETE***************************/
     def deleteByID(id)
     {
-        User user = User.get(id)
-        user.delete()
+        User.get(id).delete()
     }
 }
