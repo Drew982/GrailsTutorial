@@ -194,5 +194,5 @@ dependencies:
 - file:/C:/Users/Andrew/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/5.0.3/dcc2193db20e19e1feca8b1240dbbc4e190824fa/asm-5.0.3.jar
 - file:/C:/Users/Andrew/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.1/87c0ea803b69252868d09308b4618f766f135a96/objenesis-2.1.jar
 profiles:
-- file:/C:/Users/Andrew/.gradle/caches/modules-2/files-2.1/org.grails.profiles/web/3.2.1/7006552f96eaa7ebbcbc6ea9d2159219f438f525/web-3.2.1.jar
-- file:/C:/Users/Andrew/.gradle/caches/modules-2/files-2.1/org.grails.profiles/base/3.2.3/401c29d64a3059e2fcaea18cd68a61f867145f4c/base-3.2.3.jar
+- file:/C:/Users/Andrew/.m2/repository/org/grails/profiles/web/3.2.1/web-3.2.1.jar
+- file:/C:/Users/Andrew/.m2/repository/org/grails/profiles/base/3.2.3/base-3.2.3.jar
