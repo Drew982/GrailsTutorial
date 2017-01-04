@@ -3,16 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin Services</title>
+    <asset:javascript src="application.js"/>
+    <style>
+        body{
+            text-align: center;
+        }
+
+        table {
+            border: 3px solid black;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        td, th {
+            border: 2px solid black;
+            text-align: center;
+            font-size: 15pt;
+        }
+
+        td:hover{
+            background-color: darkblue;
+            color: white;
+        }
+
+        td{
+            transition: 0.5s background-color;
+        }
+
+        tr:nth-child(odd){
+            background-color: greenyellow;
+        }
+
+        tr:nth-child(even){
+            background-color: coral;
+        }
+
+        .button {
+            color: white;
+
+            font-weight: bold;
+
+            height: 50px;
+            width: 75px;
+
+            margin: 10px 25px;
+        }
+
+        .update {
+            background-color: green;
+        }
+
+        .delete {
+            background-color: red;
+        }
+
+        .create {
+            background-color: purple;
+            font-weight: bold;
+            color: whitesmoke;
+            height: 35px;
+            width: 50%;
+        }
+    </style>
 </head>
 
 <body>
 
-<ul>
-    <g:each in="${users}"><!--"for/each" loop; *. shows username within array -- makes list of item after *.-->
-        <li>
-            ${it.username} <!--"it" represents each individual iteration; ".username" shows only username within array-->
-        </li>
+%{--<ul>--}%
+    %{--<g:each in="${users}"><!--"for/each" loop; *. shows username within array -- makes list of item after *.-->--}%
+        %{--<li>--}%
+            %{--${it.username} <!--"it" represents each individual iteration; ".username" shows only username within array-->--}%
+        %{--</li>--}%
+    %{--</g:each>--}%
+%{--</ul>--}%
+
+<table>
+    <tr>
+        <th>Action</th>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Age</th>
+        <th>Height</th>
+    </tr>
+    <g:each in="${users}">
+        <tr>
+            <td>
+                <button class="update button" onclick="update()">Update</button>
+                <button class="delete button" onclick="deleteByID(${it.id})">Delete</button>
+            </td>
+            <td>
+                ${it.id}
+            </td>
+            <td>
+                ${it.username}
+            </td>
+            <td>
+                ${it.age}
+            </td>
+            <td>
+                ${it.height}
+            </td>
+        </tr>
     </g:each>
-</ul>
+</table>
+
+<button class="create" onclick="create()">Create</button>
+
+<script>
+    function create() {
+
+    }
+
+    function update() {
+
+    }
+
+    function deleteByID(id) {
+        var url = "${createLink(url: [controller: "user", action: "delete"])}";
+        alert(url)
+        $.ajax({
+            url: "localhost:8080" + url,
+            data: ({
+                id: id
+            }),
+            success: function (result) {
+                alert("Success!")
+            },
+            failure: function (result) {
+                alert("Failure!")
+            }
+        });
+    }
+</script>
+
 </body>
 </html>

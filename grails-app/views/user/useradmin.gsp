@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin Services</title>
+    <asset:javascript src="application.js"/>
     <style>
         body{
             text-align: center;
@@ -89,8 +90,8 @@
     <g:each in="${users}">
         <tr>
             <td>
-                <button class="update button">Update</button>
-                <button class="delete button">Delete</button>
+                <button class="update button" onclick="update()">Update</button>
+                <button class="delete button" onclick="deleteByID(${it.id})">Delete</button>
             </td>
             <td>
                 ${it.id}
@@ -108,7 +109,34 @@
     </g:each>
 </table>
 
-<button class="create">Create</button>
+<button class="create" onclick="create()">Create</button>
+
+<script>
+    function create() {
+
+    }
+
+    function update() {
+
+    }
+
+    function deleteByID(id) {
+        var url = "${createLink(url: [controller: "user", action: "delete"])}";
+        alert(url)
+        $.ajax({
+            url: "localhost:8080" + url,
+            data: ({
+                id: id
+            }),
+            success: function (result) {
+                alert("Success!")
+            },
+            failure: function (result) {
+                alert("Failure!")
+            }
+        });
+    }
+</script>
 
 </body>
 </html>
