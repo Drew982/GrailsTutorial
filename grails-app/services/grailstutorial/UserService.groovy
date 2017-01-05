@@ -45,7 +45,7 @@ class UserService //Handles Data Access Objects [CRUD - Create, Read, Update, De
     def updateAge(id, age)
     {
         User user = User.get(id)
-        user.age = age
+        user.age = Integer.parseInt(age)
         user.save()
     }
 

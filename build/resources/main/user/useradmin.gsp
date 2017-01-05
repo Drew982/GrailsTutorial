@@ -90,7 +90,7 @@
     <g:each in="${users}">
         <tr>
             <td>
-                <button class="update button" onclick="update()">Update</button>
+                <button class="update button" onclick="update(${it.id})">Update</button>
                 <button class="delete button" onclick="deleteByID(${it.id})">Delete</button>
             </td>
             <td>
@@ -116,8 +116,8 @@
         window.location.href="/user/admin/create";
     }
 
-    function update() {
-
+    function update(id) {
+        window.location.href="/user/admin/update?id=" + id;
     }
 
     function deleteByID(id) {

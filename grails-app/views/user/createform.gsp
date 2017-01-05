@@ -5,7 +5,7 @@
     <title>Create User Form</title>
 </head>
 <body>
-<g:form name="CreateForm" url="[controller: 'user', action: 'admin']">
+<g:form name="CreateForm" url="[controller: 'user', action: 'create']">
     <label>Username</label>
     <g:textField name="username" placeholder="Username"/>
     <br>

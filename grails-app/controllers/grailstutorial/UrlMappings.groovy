@@ -14,6 +14,7 @@ class UrlMappings {
 
         "/user/admin"(controller: "user", action: "admin")
         "/user/admin/create"(view:"user/createform")
+        "/user/admin/update"(view:"user/updateform")
         "/user/create"(controller: "user", action: "create")
         "/user/update"(controller: "user", action: "update")
         "/user/delete"(controller: "user", action: "delete")

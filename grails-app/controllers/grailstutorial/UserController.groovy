@@ -26,7 +26,7 @@ class UserController
     def update()
     {
         userService.updateAge(params.id, params.age)
-        render(status: 200)
+        redirect(controller: "user", action: "admin")
     }
 
     def delete()
