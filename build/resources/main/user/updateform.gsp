@@ -7,7 +7,7 @@
 <body>
 <g:form name="UpdateForm" url="[controller: 'user', action: 'update']">
     <label>ID</label>
-    <g:textField name="id" value="${params.id}"/>
+    <g:textField name="id" value="${params.id}" readonly="true"/>
     <br>
     <label>Age</label>
     <g:textField name="age" placeholder="Age"/>

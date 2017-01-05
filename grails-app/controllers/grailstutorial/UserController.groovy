@@ -2,7 +2,7 @@ package grailstutorial
 
 class UserController
 {
-    UserService userService
+    UserService userService //Spring Bean
 
     //Method for old action "q" in UrlMappings [now replaced by admin/user -- action: "admin"]
 //    def q() {

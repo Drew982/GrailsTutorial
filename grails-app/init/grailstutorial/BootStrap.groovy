@@ -11,7 +11,12 @@ class BootStrap
         new User(username: "Olivia", age: 26, height: 5).save()
         new User(username: "Terry", age: 24, height: 8).save()
         new User(username: "Mark", age: 29, height: 2).save()
+
+        new Login(username: "Adw1", password: "123").save()
+        new Login(username: "Le2", password: "234").save()
+        new Login(username: "Jhn3", password: "456").save()
     }
+
     def destroy = {
         User.list()?.each { user ->
             println (user.username)

@@ -10,7 +10,9 @@ class UrlMappings {
 //        }
 
         "/"(view:"/index")
-        "/new"(view:"/newpage") //left-side is URL mapping; right-side is page to be called/rendered
+        "/new"(view:"user/newpage") //left-side is URL mapping; right-side is page to be called/rendered
+
+        "/login"(view: "login/login")
 
         "/user/admin"(controller: "user", action: "admin")
         "/user/admin/create"(view:"user/createform")
