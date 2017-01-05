@@ -3,9 +3,7 @@ package grailstutorial
 class Login {
 
     String username
-    String password
-
-
+    byte[] password
 
     static constraints = {
     }
