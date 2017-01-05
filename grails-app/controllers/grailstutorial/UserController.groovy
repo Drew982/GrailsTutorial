@@ -1,7 +1,5 @@
 package grailstutorial
 
-import grails.web.RequestParameter
-
 class UserController
 {
     UserService userService
@@ -19,20 +17,21 @@ class UserController
         render(view: "useradmin", model: [users: users])
     }
 
-    def create(String username, int age, int height)
+    def create()
     {
-        def users = userService.createUser()
+        userService.createUser(params.username, params.age, params.height)
+        redirect(controller: "user", action: "admin")
     }
 
-    def update(int id, int age)
+    def update()
     {
-        def users = userService.updateAge()
+        userService.updateAge(params.id, params.age)
+        render(status: 200)
     }
 
-    def delete(@RequestParameter("id") int id)
+    def delete()
     {
-        println id
-        userService.deleteByID(id)
-        render(status: 404)
+        userService.deleteByID(params.id)
+        render(status: 200)
     }
 }

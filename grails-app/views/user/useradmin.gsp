@@ -5,78 +5,78 @@
     <title>Admin Services</title>
     <asset:javascript src="application.js"/>
     <style>
-        body{
-            text-align: center;
-        }
+    body {
+        text-align: center;
+    }
 
-        table {
-            border: 3px solid black;
-            border-collapse: collapse;
-            margin-bottom: 10px;
-            table-layout: fixed;
-            width: 100%;
-        }
+    table {
+        border: 3px solid black;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+        table-layout: fixed;
+        width: 100%;
+    }
 
-        td, th {
-            border: 2px solid black;
-            text-align: center;
-            font-size: 15pt;
-        }
+    td, th {
+        border: 2px solid black;
+        text-align: center;
+        font-size: 15pt;
+    }
 
-        td:hover{
-            background-color: darkblue;
-            color: white;
-        }
+    td:hover {
+        background-color: darkblue;
+        color: white;
+    }
 
-        td{
-            transition: 0.5s background-color;
-        }
+    td {
+        transition: 0.5s background-color;
+    }
 
-        tr:nth-child(odd){
-            background-color: greenyellow;
-        }
+    tr:nth-child(odd) {
+        background-color: greenyellow;
+    }
 
-        tr:nth-child(even){
-            background-color: coral;
-        }
+    tr:nth-child(even) {
+        background-color: coral;
+    }
 
-        .button {
-            color: white;
+    .button {
+        color: white;
 
-            font-weight: bold;
+        font-weight: bold;
 
-            height: 50px;
-            width: 75px;
+        height: 50px;
+        width: 75px;
 
-            margin: 10px 25px;
-        }
+        margin: 10px 25px;
+    }
 
-        .update {
-            background-color: green;
-        }
+    .update {
+        background-color: green;
+    }
 
-        .delete {
-            background-color: red;
-        }
+    .delete {
+        background-color: red;
+    }
 
-        .create {
-            background-color: purple;
-            font-weight: bold;
-            color: whitesmoke;
-            height: 35px;
-            width: 50%;
-        }
+    .create {
+        background-color: purple;
+        font-weight: bold;
+        color: whitesmoke;
+        height: 35px;
+        width: 50%;
+    }
     </style>
 </head>
 
 <body>
 
 %{--<ul>--}%
-    %{--<g:each in="${users}"><!--"for/each" loop; *. shows username within array -- makes list of item after *.-->--}%
-        %{--<li>--}%
-            %{--${it.username} <!--"it" represents each individual iteration; ".username" shows only username within array-->--}%
-        %{--</li>--}%
-    %{--</g:each>--}%
+%{--<g:each in="${users}"><!--"for/each" loop; *. shows username within array -- makes list of item after *.-->--}%
+%{--<li>--}%
+%{--${it.username} <!--"it" represents each individual iteration; ".username" shows only username within array-->--}%
+%{--</li>--}%
+%{--</g:each>--}%
 %{--</ul>--}%
 
 <table>
@@ -113,7 +113,7 @@
 
 <script>
     function create() {
-
+        window.location.href="/user/admin/create";
     }
 
     function update() {
@@ -122,14 +122,13 @@
 
     function deleteByID(id) {
         var url = "${createLink(url: [controller: "user", action: "delete"])}";
-        alert(url)
         $.ajax({
-            url: "localhost:8080" + url,
+            url: url,
             data: ({
                 id: id
             }),
             success: function (result) {
-                alert("Success!")
+                location.reload();
             },
             failure: function (result) {
                 alert("Failure!")
