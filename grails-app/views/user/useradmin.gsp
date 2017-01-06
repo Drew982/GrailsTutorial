@@ -79,6 +79,8 @@
 %{--</g:each>--}%
 %{--</ul>--}%
 
+<h1>Hello ${session.username}</h1>
+
 <table>
     <tr>
         <th>Action</th>
@@ -110,32 +112,9 @@
 </table>
 
 <button class="create" onclick="create()">Create</button>
+<button onclick="signout()">Signout</button>
 
-<script>
-    function create() {
-        window.location.href="/user/admin/create";
-    }
-
-    function update(id) {
-        window.location.href="/user/admin/update?id=" + id;
-    }
-
-    function deleteByID(id) {
-        var url = "${createLink(url: [controller: "user", action: "delete"])}";
-        $.ajax({
-            url: url,
-            data: ({
-                id: id
-            }),
-            success: function (result) {
-                location.reload();
-            },
-            failure: function (result) {
-                alert("Failure!")
-            }
-        });
-    }
-</script>
+<asset:javascript src="useradmin.js"/>
 
 </body>
 </html>

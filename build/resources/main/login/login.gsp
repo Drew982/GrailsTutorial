@@ -5,6 +5,9 @@
     <title>Login</title>
 </head>
 <body>
+<g:if test="${session.loginFailed}">
+    <h2>Login Failed!</h2>
+</g:if>
 <g:form name="Login" url="[controller: 'login', action: 'login']">
     <label>Username</label>
     <g:textField name="username"/>

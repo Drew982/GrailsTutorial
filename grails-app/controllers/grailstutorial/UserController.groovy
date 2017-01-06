@@ -13,8 +13,13 @@ class UserController
 
     def admin() //Read endpoint
     {
-        def users = userService.getUsers()
-        render(view: "useradmin", model: [users: users])
+        if (session.username) {
+            def users = userService.getUsers()
+            render(view: "useradmin", model: [users: users])
+        }
+        else {
+            redirect(uri: "/login") //Returns to login page if failure
+        }
     }
 
     def create()
