@@ -23,7 +23,6 @@ class LoginService {
     def verifyPassword(id, password) {
         Login login = Login.get(id) //Gives access to ID, username & encrypted password
         login.password == password
-
     }
 
 }
